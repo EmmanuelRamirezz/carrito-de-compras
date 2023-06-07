@@ -5,3 +5,9 @@ React Routes
 Tailwind
 Responsive design
 Una historia en un repositorio en github
+
+Apuntes para la correcta comprension del proyecto
+
+Creamos un proyecto de vite siguiendo la documentacion de tailwind
+Creamos un repositorio remoto y lo vinculamos con nuestro repositorio local
+Para tener acceso a react routes instalamos: npm i react-dom-routes
