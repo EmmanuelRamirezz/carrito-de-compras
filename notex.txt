@@ -1,0 +1,7 @@
+Este proyecto contiente
+Las mejores practicas de react
+React Context
+React Routes
+Tailwind
+Responsive design
+Una historia en un repositorio en github
