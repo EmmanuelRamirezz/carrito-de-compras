@@ -1,4 +1,49 @@
+import {cartContext} from "../contexts/ShoppingCartContext"
+import { useContext } from "react";
+
 function Item({id, name, price, imgUrl}){
+  //funcion add to cart
+  const [cart, setCart] = useContext(cartContext);
+
+  const addToCart = () => {
+    setCart((currItems) => {
+      const isItemsFound = currItems.find((item) => item.id === id);
+      if (isItemsFound) {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [...currItems, { id, quantity: 1, price }];
+      }
+    });
+  };
+
+  const removeItem = (id) => {
+    setCart((currItems) => {
+      if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        return currItems.filter((item) => item.id !== id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+  };
+
+  const getQuantityById = (id) => {
+    return cart.find((item) => item.id === id)?.quantity || 0;
+  };
+
+  const quantityPerItem = getQuantityById(id);
+
   return(
     <div className="border-2 p-5">
       <div className="h-36 w-36 m-auto">
