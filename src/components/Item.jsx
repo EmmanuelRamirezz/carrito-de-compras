@@ -1,9 +1,9 @@
-import {cartContext} from "../contexts/ShoppingCartContext"
+import {CartContext} from "../contexts/ShoppingCartContext"
 import { useContext } from "react";
 
 function Item({id, name, price, imgUrl}){
   //funcion add to cart
-  const [cart, setCart] = useContext(cartContext);
+  const [cart, setCart] = useContext(CartContext);
 
   const addToCart = () => {
     setCart((currItems) => {
