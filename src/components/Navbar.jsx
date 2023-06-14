@@ -1,10 +1,15 @@
 import {Link} from 'react-router-dom'
+import { CartContext } from '../contexts/ShoppingCartContext';
+import { useContext } from 'react';
 function Navbar(){
-  const navStles={
-    color: "#fff",
-    listStyle: "none",
-    textDecoration: "none",
-  }
+  //Es el context con un useState el cual nos da acceso a los valores del carrito desde toda la app
+  const[cart, setCart] = useContext(CartContext);
+
+  //nos permite encontrar la suma total del arreglo del carrito
+  const quantity = cart.reduce((acumulacion, current) => {
+   return acumulacion + current.quantity; 
+  }, 0) //se puede hacer con for   
+
   return(
     <div>
       <nav className="flex justify-between w-full h-24 px-10 bg-slate-500" >
@@ -21,7 +26,7 @@ function Navbar(){
             <li>
               Cart items: 
               <span className="cart-count mx-3">
-                0
+                {quantity}
               </span> 
             </li>
           </Link>
