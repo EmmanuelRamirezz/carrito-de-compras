@@ -19,19 +19,19 @@
 	},
 	{
 		"id": 4,
-		"name": "PC",
+		"name": "Gamer PC",
 		"price": 2000,
 		"imgUrl": "https://i.imgur.com/soA45CQ.jpg"
 	},
 	{
 		"id": 5,
-		"name": "Silla",
+		"name": "Gaming Chair",
 		"price": 400,
 		"imgUrl": "https://i.imgur.com/TvNLIFe.jpg"
 	},
 	{
 		"id": 6,
-		"name": "Audifonos",
+		"name": "Headphones",
 		"price": 50,
 		"imgUrl": "https://i.imgur.com/2HlMJe0.jpg"
 	},

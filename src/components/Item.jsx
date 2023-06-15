@@ -62,7 +62,7 @@ function Item({id, name, price, imgUrl}){
   return(
     <div className="border-2 p-5">
       {quantityPerItem > 0 && (
-        <div className="border-2 p-5">
+        <div className="mx-auto mb-4 text-center text-white w-10 bg-orange-300 rounded-xl font-bold">
           {quantityPerItem}
         </div>
       )}
@@ -82,13 +82,13 @@ function Item({id, name, price, imgUrl}){
       {/*Mostramos el boton de Add to cart si no lo tenemos en el carrito. Y si ya lo tenemos debe de mostrar Add more*/}
       {
         quantityPerItem === 0 ? (
-          <button className="bg-green-500 py-2 px-4 mt-8  rounded-3xl text-white"     
+          <button className="bg-green-400 py-2 px-4 mt-8  rounded-3xl text-white"     
           onClick={() => addToCart()} >
             Add to cart
           </button>
         ):
         (
-          <button className="bg-blue-500 py-2 px-4 mt-8  rounded-3xl text-white"     
+          <button className="bg-blue-400 py-2 px-4 mt-8  rounded-3xl text-white"     
           onClick={() => addToCart()} >
             Add more
           </button>
@@ -96,7 +96,7 @@ function Item({id, name, price, imgUrl}){
       }
         {/* Muestra el siguiente botton si la cantidad del elemento es mayor a 0 */}
       {
-        quantityPerItem > 0 && <button className="bg-red-500 py-2 px-4 mt-8  rounded-3xl text-white" onClick={() => removeItem(id)}>
+        quantityPerItem > 0 && <button className="bg-red-400 py-2 px-4 mt-8  rounded-3xl text-white" onClick={() => removeItem(id)}>
           Substract Item
         </button>
       }
