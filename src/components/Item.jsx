@@ -88,7 +88,7 @@ function Item({id, name, price, imgUrl}){
           </button>
         ):
         (
-          <button className="bg-blue-400 py-2 px-4 mt-8  rounded-3xl text-white"     
+          <button className="bg-blue-400 py-2 px-4 mt-8 mr-4 rounded-3xl text-white"     
           onClick={() => addToCart()} >
             Add more
           </button>
@@ -97,7 +97,7 @@ function Item({id, name, price, imgUrl}){
         {/* Muestra el siguiente botton si la cantidad del elemento es mayor a 0 */}
       {
         quantityPerItem > 0 && <button className="bg-red-400 py-2 px-4 mt-8  rounded-3xl text-white" onClick={() => removeItem(id)}>
-          Substract Item
+          Substract item
         </button>
       }
       
